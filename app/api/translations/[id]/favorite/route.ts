@@ -13,7 +13,7 @@ export async function PATCH(req: Request, { params }: { params: { id: string } }
       return NextResponse.json({ message: "Unauthorized" }, { status: 401 })
     }
 
-    const { isFavorite } = await req.json()
+    const { isFavorite }: { isFavorite: boolean } = await req.json()  // Ensure `isFavorite` is a boolean
 
     // Verify the translation belongs to the user
     const translation = await prisma.translationHistory.findUnique({
@@ -32,7 +32,7 @@ export async function PATCH(req: Request, { params }: { params: { id: string } }
         id: params.id,
       },
       data: {
-        isFavorite,
+        isFavorite,  // Update the favorite status
       },
     })
 
