@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@auth/core": "latest",
+    "@auth/core": "^0.34.2",
     "@auth/prisma-adapter": "latest",
     "@emotion/is-prop-valid": "latest",
     "@google/generative-ai": "latest",
