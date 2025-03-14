@@ -7,14 +7,6 @@ import { useEffect } from "react"
 
 
 export default function TranslatePage() {
-  const { data: session } = useSession();
-  const router = useRouter();
-
-  useEffect(()=> {
-    if(!session) {
-      router.push("/sign-in")
-    }
-  },[router])
 
   return (
     <div className="container mx-auto py-8">
